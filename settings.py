@@ -5,23 +5,42 @@ WIDTH = 600
 HEIGHT = 600
 FPS = 60
 
-# Grid setup (The game moves in a grid-like pattern)
-TILE_SIZE = 40
+# Grid setup
+TILE_SIZE = 50 
 GRID_WIDTH = WIDTH // TILE_SIZE
 GRID_HEIGHT = HEIGHT // TILE_SIZE
 
-# Colors (R, G, B)
+# --- COLORS ---
 WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
-GREEN = (34, 139, 34)   # Frog color
-GRAY = (128, 128, 128)  # Road color
-BLUE = (65, 105, 225)   # River color
-RED = (200, 50, 50)     # Car color
-BROWN = (139, 69, 19)   # Log color
+BLACK = (20, 20, 20)
 
-# Game Areas (Y-coordinates for where road and river start)
-# We calculate these based on tile size so they fit the grid
-RIVER_TOP = 2 * TILE_SIZE
-RIVER_BOTTOM = 7 * TILE_SIZE
-ROAD_TOP = 8 * TILE_SIZE
-ROAD_BOTTOM = 13 * TILE_SIZE
+# Voxel Palette (Main Color + Shadow Color)
+# Grass
+GRASS_TOP = (109, 190, 48)
+GRASS_SIDE = (80, 150, 30)
+
+# Road
+ROAD_TOP = (90, 90, 90)
+ROAD_SIDE = (60, 60, 60)
+
+# Water
+WATER_TOP = (80, 180, 255)
+WATER_DEEP = (40, 120, 200)
+
+# Objects
+LOG_TOP = (139, 69, 19)
+LOG_SIDE = (100, 50, 10)
+
+TREE_TOP = (34, 139, 34)
+TREE_SIDE = (20, 100, 20)
+TRUNK_TOP = (160, 82, 45)
+
+CHICKEN_WHITE = (240, 240, 240)
+CHICKEN_SHADOW = (180, 180, 180)
+BEAK_ORANGE = (255, 165, 0)
+COMB_RED = (220, 40, 40)
+
+# Lane Types
+LANE_GRASS = 0
+LANE_ROAD = 1
+LANE_WATER = 2
